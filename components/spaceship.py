@@ -1,7 +1,7 @@
 import pygame
 from pygame.locals import *
 from .bullet import Bullet
-from ..globalvars import *
+from globalvars import *
 
 #image when spaceship is exploded
 explosion = pygame.image.load("images/explosion.png")

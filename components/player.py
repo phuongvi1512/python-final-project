@@ -1,7 +1,7 @@
 import pygame
 from pygame.locals import *
 from .bullet import PlayerBullet
-from ..globalvars import *
+from globalvars import *
 from .spaceship import Spaceship
 #player image is yellow spaceship
 player_img = pygame.image.load("images/spaceship_yellow.png")
@@ -19,7 +19,7 @@ class Player(Spaceship):
         player's original health is 10, if player get hitted by enemy bullet, the health is deducted
         if health < 0, the player is dead, the ship is exploded
         """
-        super.__init__(player_img, 100, 300, SPEED)
+        super().__init__(player_img, 100, 300, SPEED)
         self.is_exploded = False
         self.score = 0
         self.health = 10

@@ -19,8 +19,8 @@
 # pygame.quit()
 
 import pygame
-from screens import WelcomeScreen, GameScreen, GameOverScreen, SignInScreen
-from globalvars import HEIGHT, WIDTH
+from screens import WelcomeScreen, GameScreen, GameOverScreen, Login
+from globalvars import *
 import uuid
 
 
@@ -38,7 +38,7 @@ class Game:
 
         # These are the available screens
         screens = {
-            "signin": SignInScreen,
+            "signin": Login,
             "welcome": WelcomeScreen,
             "game": GameScreen,
             "game_over": GameOverScreen,
@@ -74,20 +74,20 @@ class Game:
             screen.run()
 
             # Keep the final score
-            if screen.final_score is not None:
-                final_score = screen.final_score
+            # if screen.final_score is not None:
+            #     final_score = screen.final_score
 
-            # Keep the username from signin screen
-            if screen.username is not None:
-                username = screen.username
+            # # Keep the username from signin screen
+            # if screen.username is not None:
+            #     username = screen.username
 
-            # Keep the password from signin screen
-            if screen.password is not None:
-                password = screen.password
+            # # Keep the password from signin screen
+            # if screen.password is not None:
+            #     password = screen.password
 
-            # When the `run` method stops, we should have a `next_screen` setup
-            if screen.next_screen is False:
-                running = False
+            # # When the `run` method stops, we should have a `next_screen` setup
+            # if screen.next_screen is False:
+            #     running = False
 
             # Switch to the next screen
             current_screen = screen.next_screen

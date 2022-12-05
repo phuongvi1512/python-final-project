@@ -1,5 +1,5 @@
 from .base import BaseScreen
 from .signin import Login
-from .welcomescreen import WelcomScreen
+from .welcome import WelcomeScreen
 from .gamescreen import GameScreen
 from .gameover import GameOverScreen

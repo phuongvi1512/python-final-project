@@ -2,10 +2,9 @@ import pygame
 from pygame.locals import *
 from .spaceship import Spaceship
 from .player import Player
-from __init__ import *
 import random, math
-from ..globalvars import *
-from bullet import EnemyBullet
+from globalvars import *
+from .bullet import EnemyBullet
 
 
 #image of enemy spaceship
@@ -21,7 +20,7 @@ class Enemy(Spaceship):
 
     """
     def __init__(self, posx, posy):
-        super.__init__(enemy_img, posx, posy, )
+        super().__init__(enemy_img, posx, posy, )
         self.rect = self.image.get_rect()
         
         # #starting position

@@ -74,7 +74,7 @@ class EnemyBullet(Bullet):
     enemy bullet color is Red
     """
     def __init__(self, direction, posx, posy):
-        super.__init__(RED,posx, posy)
+        super().__init__(RED,posx, posy)
 
 
 
@@ -83,4 +83,4 @@ class PlayerBullet(Bullet):
     player bullet color is yellow
     """
     def __init__(self, direction, posx, posy):
-        super.__init__(YELLOW, direction, posx, posy)
+        super().__init__(YELLOW, direction, posx, posy)

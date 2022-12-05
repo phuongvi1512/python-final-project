@@ -1,17 +1,19 @@
 import pygame
 from .base import BaseScreen
-from components import TextBox
+from text import TextBox
 from globalvars import *
 #from ..components import Background, Logo
 
-
+bg_img = pygame.image.load("images/space.png")
+bg_img = pygame.transform.scale(bg_img,(WIDTH,HEIGHT))
 class WelcomeScreen(BaseScreen):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         
         #Put back default screen size
-        self.window = pygame.display.set_mode((800, 800))
-
+        self.window = pygame.display.set_mode((WIDTH, HEIGHT))
+        
+        
         # #Main Background Class
         # self.background = Background()
 
@@ -23,7 +25,7 @@ class WelcomeScreen(BaseScreen):
 
         #Instruction textbox
         self.textbox2 = TextBox(
-            (200, 100), "Ezreal", color=(255, 255, 255), bgcolor=(0, 0, 255)
+            (200, 100), "Let's play", color=(255, 255, 255), bgcolor=(0, 0, 255)
         )
         self.textbox2.rect.x, self.textbox2.rect.y= 50, 400
 
@@ -37,8 +39,9 @@ class WelcomeScreen(BaseScreen):
 
     def draw(self):
         self.window.fill((255, 255, 255))
-        self.window.blit(self.background.image, self.background.rect)
-        self.window.blit(self.league_logo.image, self.league_logo.rect)
+        self.window.blit(bg_img,(0,0))
+        # self.window.blit(self.background.image, self.background.rect)
+        # self.window.blit(self.league_logo.image, self.league_logo.rect)
         self.sprites.draw(self.window)
 
     def update(self):
@@ -46,7 +49,7 @@ class WelcomeScreen(BaseScreen):
 
     def manage_event(self, event):
         
-        if event.type == pygame.KEYDOWN and event.key == K_SPACE:
+        if event.type == pygame.MOUSEBUTTONDOWN:
             mouse = event.pos
             if self.textbox2.rect.collidepoint(mouse):
                 self.next_screen = "game"

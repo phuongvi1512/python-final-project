@@ -2,14 +2,14 @@ import pygame
 from globalvars import * #import global variables
 pygame.font.init()
 
-default_font = pygame.font.Font("fonts/joystix-monospace.ttf")
+default_font = pygame.font.Font("font/joystix-monospace.ttf", 20)
 
 
 def render_text(text, size, color=BLACK):
     """Returns a surface with rendered text
        color of text will be black
     """
-    font = pygame.font.Font(default_font, size)
+    font = default_font
     return font.render(text, True, color)
 
 

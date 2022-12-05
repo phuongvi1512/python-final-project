@@ -1,8 +1,7 @@
-import pygame
+import pygame, requests
 from .base import BaseScreen
-from components import TextBox, InputBox
-import webbrowser
-import requests
+from text import TextBox, InputBox
+#import webbrowser
 
 
 class GameOverScreen(BaseScreen):
