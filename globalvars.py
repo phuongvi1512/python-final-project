@@ -1,0 +1,21 @@
+#COLORS
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+YELLOW = (255, 255, 0)
+
+#screen
+FPS = 60
+WIDTH = 1000
+HEIGHT = 500
+TEXT_SIZE = 24
+
+#spaceship size
+SHIP_SIZE = (55, 40) 
+
+#player
+SPEED = 7
+
+#enemy
+ENEMY_ORIGINAL_SPEED = 3
+RANGE_TO_SHOOT = 30
